@@ -1,0 +1,5 @@
+# Unexpected Behavior When Directly Modifying Instance Variables in Ruby
+
+This example demonstrates a potential issue when directly manipulating instance variables in Ruby using `instance_variable_set`. While this method offers flexibility, it can bypass accessor methods (like `attr_accessor`, `attr_reader`, `attr_writer`) and lead to unintended consequences or inconsistencies within your object's behavior.
+
+The included Ruby files illustrate a simple class `MyClass` where we initially use accessor methods to set and retrieve values. The unexpected behavior arises when directly manipulating the instance variable `@value` bypassing the intended accessors.  This might lead to issues with data integrity, debugging difficulties, and a violation of encapsulation principles. This is particularly problematic in larger applications with complex object relationships.  It's generally best practice to utilize accessor methods to maintain consistency and ensure predictability.
